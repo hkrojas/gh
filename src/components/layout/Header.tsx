@@ -27,10 +27,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 flex items-center ${
         isScrolled 
-          ? "bg-white/95 backdrop-blur-md shadow-premium py-3 border-b border-gray-100" 
-          : "bg-white py-6"
+          ? "bg-[#0A1930]/96 backdrop-blur-[10px] shadow-sm border-b border-white/8 h-[68px]" 
+          : "bg-[#0A1930]/88 backdrop-blur-[10px] h-[76px]"
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
@@ -41,25 +41,26 @@ export default function Header() {
             alt="Grupo Hernandez Logo"
             width={180}
             height={60}
-            className="h-10 w-auto md:h-12 transition-transform duration-300 group-hover:scale-[1.02]"
+            className="h-9 w-auto md:h-11 transition-transform duration-300 group-hover:scale-[1.02]"
             priority
           />
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center space-x-10">
+        <nav className="hidden lg:flex items-center space-x-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="nav-link-premium text-sm tracking-tight"
+              className="relative text-white/86 hover:text-white text-sm font-medium transition-colors py-2 group/nav"
             >
               {link.name}
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-amber transition-all duration-300 group-hover/nav:w-full"></span>
             </Link>
           ))}
           <Link
             href="/contacto"
-            className="btn-premium !py-3 !text-sm"
+            className="btn-premium !py-2.5 !px-6 !text-sm"
           >
             {siteContent.global.ctaMaster}
           </Link>
@@ -67,30 +68,15 @@ export default function Header() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden text-brand-navy"
+          className="lg:hidden text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
-          <svg
-            className="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {isMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             )}
           </svg>
         </button>
@@ -98,12 +84,12 @@ export default function Header() {
 
       {/* Mobile Nav Overlay */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-xl py-6 px-4 flex flex-col space-y-4 animate-in fade-in slide-in-from-top-4">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-brand-navy border-t border-white/5 shadow-2xl py-8 px-6 flex flex-col space-y-5 animate-in fade-in slide-in-from-top-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-brand-navy font-semibold text-lg py-2 border-b border-gray-50"
+              className="text-white/90 font-medium text-lg py-3 border-b border-white/5"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.name}
@@ -111,7 +97,7 @@ export default function Header() {
           ))}
           <Link
             href="/contacto"
-            className="bg-brand-amber text-brand-navy px-6 py-4 rounded-sm font-bold text-center mt-4 shadow-sm"
+            className="btn-premium w-full mt-4"
             onClick={() => setIsMenuOpen(false)}
           >
             {siteContent.global.ctaMaster}

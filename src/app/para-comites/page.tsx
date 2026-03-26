@@ -13,17 +13,17 @@ export default function ParaComitesPage() {
         breadcrumb={[{ label: "Para Comités", href: "/para-comites" }]}
       />
       
-      <section className="section-spacing bg-white">
+      <section className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mb-16 animate-fade-in-up">
-            <span className="text-brand-amber font-bold uppercase tracking-widest text-xs mb-4 block">
+          <div className="max-w-3xl mb-20 animate-in fade-in slide-in-from-bottom-8 duration-700">
+            <span className="text-brand-amber font-bold uppercase tracking-[0.3em] text-[10px] mb-6 block">
               Solidez Operativa
             </span>
-            <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-brand-navy mb-6">
+            <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-brand-navy mb-8 leading-[1.15]">
               Le entregamos el control real de su edificio.
             </h2>
-            <p className="text-lg text-gray-500 leading-relaxed">
-              Sabemos que el principal reto de un comité es la falta de información clara y la dependencia de proveedores poco confiables. Nuestra gestión elimina esas dudas.
+            <p className="text-lg md:text-xl text-gray-500 leading-relaxed font-medium">
+              Sabemos que el principal reto de un comité es la falta de información clara y la dependencia de proveedores poco confiables. Nuestra gestión elimina esas dudas con evidencia real.
             </p>
           </div>
 
@@ -31,42 +31,42 @@ export default function ParaComitesPage() {
             {[
               { 
                 title: "Transparencia Total", 
-                desc: "Acceso ilimitado a estados financieros y documentos del edificio para el comité.",
+                desc: "Acceso ilimitado a estados financieros y documentos del edificio para el comité, con reportes auditables.",
                 icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 )
               },
               { 
                 title: "Control Operativo", 
-                desc: "Supervisión diaria de personal y proveedores externos con reportes de avance.",
+                desc: "Supervisión técnica diaria de personal y proveedores externos con reportes de avance fotográficos.",
                 icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                   </svg>
                 )
               },
               { 
                 title: "Asesoría Legal", 
-                desc: "Acompañamiento en la toma de decisiones críticas y cumplimiento de normativas.",
+                desc: "Acompañamiento especializado en la toma de decisiones críticas y cumplimiento estricto de normativas vigentes.",
                 icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 )
               },
             ].map((benefit, idx) => (
               <div 
                 key={idx} 
-                className="bg-white p-10 border border-gray-100 shadow-premium rounded-sm hover:shadow-hover transition-all duration-300 animate-fade-in-up" 
-                style={{ animationDelay: `${0.1 * (idx + 1)}s` }}
+                className="bg-white p-10 border border-[#E1E8F0] shadow-trust rounded-[22px] hover:shadow-premium transition-all duration-500 animate-in fade-in slide-in-from-bottom-8" 
+                style={{ animationDelay: `${0.1 * (idx + 1)}s`, animationFillMode: 'both' }}
               >
-                <div className="w-16 h-16 bg-brand-gray text-brand-navy rounded-sm flex items-center justify-center mb-8">
+                <div className="w-14 h-14 bg-brand-gray text-brand-navy rounded-[14px] flex items-center justify-center mb-10 group-hover:bg-brand-amber transition-colors">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-bold text-brand-navy mb-4">{benefit.title}</h3>
-                <p className="text-gray-500 leading-relaxed text-sm">
+                <h3 className="text-xl font-bold text-brand-navy mb-5 tracking-tight">{benefit.title}</h3>
+                <p className="text-gray-500 leading-relaxed text-sm font-medium opacity-80">
                   {benefit.desc}
                 </p>
               </div>
@@ -75,19 +75,22 @@ export default function ParaComitesPage() {
         </div>
       </section>
 
-      <section className="section-spacing bg-brand-gray">
+      <section className="py-24 bg-[#EEF3F8]">
         <div className="container mx-auto px-4">
-          <div className="bg-brand-navy p-12 md:p-20 rounded-sm text-white relative overflow-hidden animate-fade-in-up">
-            <div className="absolute top-0 right-0 w-1/4 h-full bg-brand-amber opacity-10 skew-x-[-15deg] translate-x-1/2"></div>
+          <div className="bg-brand-navy p-12 md:p-24 rounded-[28px] text-white relative overflow-hidden shadow-trust animate-in fade-in zoom-in-95 duration-700">
+            {/* Background elements */}
+            <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-amber opacity-[0.05] skew-x-[-25deg] translate-x-1/2"></div>
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-white opacity-[0.03] rounded-full blur-3xl"></div>
             
             <div className="relative z-10 max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-5xl font-montserrat font-bold mb-8">
+              <span className="inline-block text-brand-amber font-bold uppercase tracking-[0.3em] text-[10px] mb-8">Gestión Prioritaria</span>
+              <h2 className="text-3xl md:text-5xl font-montserrat font-bold mb-10 leading-tight tracking-tight">
                 ¿Listo para ordenar la gestión de su edificio?
               </h2>
-              <p className="text-xl text-white/70 mb-12">
-                Coordinemos una reunión para presentarle nuestro plan de trabajo detallado y una evaluación sin costo.
+              <p className="text-lg md:text-xl text-white/50 mb-14 font-medium leading-relaxed">
+                Coordinemos una reunión estratégica para presentarle nuestro plan de trabajo detallado y una evaluación operativa sin costo.
               </p>
-              <Link href="/contacto" className="btn-premium !bg-brand-amber !text-brand-navy">
+              <Link href="/contacto" className="btn-premium !bg-brand-amber !text-brand-navy shadow-button hover:scale-105 active:scale-95 transition-all">
                 Solicitar Propuesta Comercial
               </Link>
             </div>

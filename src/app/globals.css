@@ -1,46 +1,60 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-navy: #0A192F;
+  /* Exact Institutional Palette */
+  --color-brand-navy: #0A1930;
+  --color-brand-navy-light: #10284A;
+  --color-brand-navy-deep: #071423;
   --color-brand-amber: #C5A021;
-  --color-brand-gray: #F9FAFB;
-  --color-text-main: #1E293B;
+  --color-brand-amber-hover: #AF8D18;
+  --color-brand-amber-soft: #E6D08A;
   
+  --color-bg-main: #F5F7FB;
+  --color-bg-alt: #EEF3F8;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-surface-soft: #F8FAFD;
+  
+  --color-border-soft: #D9E2EE;
+  --color-border-tenue: #E6ECF5;
+
+  --color-text-main: #16253D;
+  --color-text-secondary: #5F6F86;
+  --color-text-on-navy: #F8FBFF;
+  
+  --color-state-success: #1E7A59;
+  --color-state-error: #B34242;
+
   --font-montserrat: "Montserrat", sans-serif;
   --font-inter: "Inter", sans-serif;
 
-  --shadow-premium: 0 10px 30px -10px rgba(10, 25, 47, 0.15);
-  --shadow-hover: 0 20px 40px -15px rgba(10, 25, 47, 0.2);
+  /* Institutional Shadows & Radii */
+  --shadow-premium: 0 14px 34px rgba(10, 25, 48, 0.08); /* Exact spec for cards */
+  --shadow-trust: 0 16px 36px rgba(10, 25, 48, 0.08);   /* Exact spec for trust strip */
+  --shadow-button: 0 12px 24px rgba(197, 160, 33, 0.24);
 
-  --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
-  --animate-reveal: reveal 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  --radius-sm: 14px;
+  --radius-md: 18px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
 
-  @keyframes fade-in-up {
+  /* Motion System */
+  --animate-reveal-scroll: reveal-scroll 0.32s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  
+  @keyframes reveal-scroll {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(16px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-
-  @keyframes reveal {
-    from {
-      transform: scaleX(0);
-      transform-origin: left;
-    }
-    to {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-  }
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #1E293B;
+  --background: #F5F7FB;
+  --foreground: #16253D;
 }
 
 @layer base {
@@ -48,23 +62,38 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply antialiased text-brand-navy bg-white;
-    font-family: var(--font-inter); /* Keep original font-family */
+    @apply antialiased text-text-main bg-bg-main;
+    font-family: var(--font-inter);
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-montserrat);
+  @apply font-bold text-brand-navy;
 }
 
 .section-spacing {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 88px;
+  padding-bottom: 88px;
 }
 
-@media (max-width: 768px) {
-  .section-spacing {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
+.btn-premium {
+  @apply bg-brand-amber text-brand-navy font-bold py-3 px-8 rounded-[14px] 
+         transition-all duration-220 ease shadow-button hover:bg-brand-amber-hover 
+         hover:-translate-y-[1px] flex items-center justify-center gap-2;
+  min-height: 52px;
+}
+
+.card-institutional {
+  @apply bg-white border border-border-soft rounded-[22px] p-7 
+         shadow-premium transition-all duration-220 ease 
+         hover:-translate-y-[3px] hover:shadow-trust hover:border-text-secondary/20;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+}
+
+.reveal-on-scroll.active {
+  animation: reveal-scroll 0.32s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
