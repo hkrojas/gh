@@ -43,38 +43,50 @@ export default function AtencionResidentePage() {
       
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
             {residentServices.map((service, idx) => (
-              <div key={idx} className="bg-brand-gray p-8 border border-gray-100 rounded-sm hover:border-brand-amber transition-all group">
-                <div className="text-brand-navy mb-6 group-hover:text-brand-amber transition-colors">
+              <div 
+                key={idx} 
+                className="bg-white p-10 border border-gray-100 rounded-sm shadow-premium hover:shadow-hover transition-all duration-500 group animate-fade-in-up"
+                style={{ animationDelay: `${0.1 * idx}s` }}
+              >
+                <div className="w-16 h-16 bg-brand-gray rounded-sm flex items-center justify-center text-brand-navy mb-8 group-hover:bg-brand-navy group-hover:text-brand-amber transition-all duration-500">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold text-brand-navy mb-3">{service.title}</h3>
-                <p className="text-gray-500 text-sm mb-6 leading-relaxed">
+                <h3 className="text-2xl font-bold text-brand-navy mb-4 font-montserrat">{service.title}</h3>
+                <p className="text-gray-500 mb-8 leading-relaxed">
                   {service.description}
                 </p>
-                <button className="text-brand-navy font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">
-                  Iniciar Gestión
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </button>
+                <div className="pt-6 border-t border-gray-50">
+                  <button className="text-brand-navy font-black text-[10px] uppercase tracking-[0.2em] flex items-center gap-3 hover:text-brand-amber transition-colors group/btn">
+                    Iniciar Gestión
+                    <svg className="w-5 h-5 transition-transform group-hover/btn:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             ))}
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-brand-navy mb-12 text-center">Preguntas Frecuentes</h2>
-            <div className="space-y-6">
+          <div className="max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <div className="text-center mb-16">
+              <span className="text-brand-amber font-bold uppercase tracking-widest text-xs mb-4 block">Soporte y Consultas</span>
+              <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-brand-navy">Preguntas Frecuentes</h2>
+            </div>
+            
+            <div className="space-y-8">
               {faqs.residentes.map((faq, idx) => (
-                <div key={idx} className="border-b border-gray-100 pb-6">
-                  <h4 className="text-lg font-bold text-brand-navy mb-3 flex items-start gap-3">
-                    <span className="text-brand-amber">Q.</span>
+                <div key={idx} className="bg-brand-gray/50 p-8 rounded-sm group hover:bg-white hover:shadow-premium border border-transparent hover:border-gray-100 transition-all duration-300">
+                  <h4 className="text-xl font-bold text-brand-navy mb-4 flex items-start gap-4 font-montserrat">
+                    <span className="text-brand-amber text-sm mt-1">0{idx + 1}.</span>
                     {faq.question}
                   </h4>
-                  <p className="text-gray-600 pl-8 text-sm md:text-base leading-relaxed">
-                    {faq.answer}
-                  </p>
+                  <div className="pl-12">
+                    <p className="text-gray-500 leading-relaxed text-lg">
+                      {faq.answer}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -82,15 +94,24 @@ export default function AtencionResidentePage() {
         </div>
       </section>
 
-      <section className="bg-brand-navy py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl text-white font-bold mb-6">¿Necesita asistencia directa?</h2>
-          <p className="text-white/60 mb-8">Nuestros canales de atención coordinada están disponibles para resolver sus dudas.</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href={`mailto:${siteContent.global.contactEmail}`} className="bg-white text-brand-navy px-8 py-3 rounded-sm font-bold shadow-lg hover:bg-gray-100 transition-all">
+      <section className="bg-brand-navy py-24 relative overflow-hidden">
+        {/* Background Accent */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-amber opacity-5 skew-x-[15deg] translate-x-1/2"></div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10 animate-fade-in-up">
+          <h2 className="text-3xl md:text-5xl text-white font-montserrat font-bold mb-8">¿Necesita asistencia directa?</h2>
+          <p className="text-white/50 mb-12 max-w-2xl mx-auto text-lg leading-relaxed">Nuestros canales de atención coordinada están disponibles para resolver sus dudas y reportes con prontitud.</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <a 
+              href={`mailto:${siteContent.global.contactEmail}`} 
+              className="bg-white text-brand-navy px-10 py-5 rounded-sm font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-brand-amber hover:text-brand-navy transition-all duration-300"
+            >
               Enviar Correo
             </a>
-            <a href="#" className="bg-brand-amber text-brand-navy px-8 py-3 rounded-sm font-bold shadow-lg hover:brightness-110 transition-all">
+            <a 
+              href="#" 
+              className="bg-brand-amber text-brand-navy px-10 py-5 rounded-sm font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-white hover:text-brand-navy transition-all duration-300"
+            >
               WhatsApp de Atención
             </a>
           </div>

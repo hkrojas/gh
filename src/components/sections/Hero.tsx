@@ -4,39 +4,44 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[70vh] flex items-center pt-20 overflow-hidden">
-      {/* Background Image Placeholder / Real Background */}
+    <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden bg-brand-navy">
+      {/* Background with darker gradient overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-brand-navy/30 z-10" />
         <Image
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" // Generic institutional look
-          alt="Gestión de Edificios"
+          src="/img/hero-building.jpg"
+          alt="Edificio moderno en Lima administrado por Grupo Hernandez"
           fill
-          className="object-cover"
+          className="object-cover opacity-60 scale-105 animate-pulse-slow"
           priority
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/40 to-transparent"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-20">
+      <div className="container mx-auto px-4 relative z-10 pt-20">
         <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-6xl text-white font-bold leading-tight mb-6 animate-in fade-in slide-in-from-bottom-6 duration-700">
-            {siteContent.home.hero.title}
+          <div className="inline-block px-4 py-1.5 bg-brand-amber/10 border border-brand-amber/20 rounded-full mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <span className="text-brand-amber font-bold text-xs uppercase tracking-[0.2em]">Más de 8 años de trayectoria</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-montserrat font-bold text-white leading-[1.1] mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            Solidez operativa en la <br />
+            <span className="text-brand-amber">gestión de su edificio</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
+          
+          <p className="text-xl md:text-2xl text-white/80 font-medium mb-12 max-w-2xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             {siteContent.home.hero.subtitle}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-200">
-            <Link
-              href="/contacto"
-              className="bg-brand-amber text-brand-navy px-8 py-4 rounded-sm font-bold text-lg hover:brightness-110 transition-all text-center shadow-lg"
+
+          <div className="flex flex-col sm:flex-row gap-5 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <Link 
+              href="/contacto" 
+              className="btn-premium group flex items-center justify-center gap-3"
             >
-              {siteContent.home.hero.cta}
-            </Link>
-            <Link
-              href="/nuestra-gestion"
-              className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-sm font-bold text-lg hover:bg-white/20 transition-all text-center"
-            >
-              Ver nuestra metodología
+              {siteContent.global.ctaMaster}
+              <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
           </div>
         </div>

@@ -27,37 +27,39 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md py-3" : "bg-white py-5"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled 
+          ? "bg-white/95 backdrop-blur-md shadow-premium py-3 border-b border-gray-100" 
+          : "bg-white py-6"
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center group">
           <Image
             src="/logo-trans.png"
             alt="Grupo Hernandez Logo"
             width={180}
             height={60}
-            className="h-10 w-auto md:h-12"
+            className="h-10 w-auto md:h-12 transition-transform duration-300 group-hover:scale-[1.02]"
             priority
           />
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center space-x-10">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-brand-navy font-medium hover:text-brand-amber transition-colors text-sm"
+              className="nav-link-premium text-sm tracking-tight"
             >
               {link.name}
             </Link>
           ))}
           <Link
             href="/contacto"
-            className="bg-brand-amber text-brand-navy px-6 py-2.5 rounded-sm font-bold text-sm tracking-tight hover:brightness-110 transition-all shadow-sm"
+            className="btn-premium !py-3 !text-sm"
           >
             {siteContent.global.ctaMaster}
           </Link>

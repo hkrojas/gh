@@ -8,6 +8,34 @@
   
   --font-montserrat: "Montserrat", sans-serif;
   --font-inter: "Inter", sans-serif;
+
+  --shadow-premium: 0 10px 30px -10px rgba(10, 25, 47, 0.15);
+  --shadow-hover: 0 20px 40px -15px rgba(10, 25, 47, 0.2);
+
+  --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+  --animate-reveal: reveal 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes reveal {
+    from {
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    to {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
 }
 
 :root {
@@ -15,10 +43,14 @@
   --foreground: #1E293B;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter);
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply antialiased text-brand-navy bg-white;
+    font-family: var(--font-inter); /* Keep original font-family */
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
