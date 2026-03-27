@@ -1,4 +1,5 @@
 import PageHeader from "@/components/layout/PageHeader";
+import Image from "next/image";
 
 export default function NosotrosPage() {
   return (
@@ -13,16 +14,19 @@ export default function NosotrosPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="order-2 lg:order-1 animate-in fade-in slide-in-from-left-8 duration-700">
-              <div className="aspect-[4/5] bg-brand-navy relative rounded-[28px] overflow-hidden shadow-trust group">
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-700"></div>
-                <div className="absolute inset-0 flex items-center justify-center text-white/[0.03] font-black uppercase tracking-[1.5em] text-center px-12 rotate-90 whitespace-nowrap text-4xl pointer-events-none">
-                  GRUPOHERNANDEZ • 2016
-                </div>
-                {/* Decorative Elements */}
-                <div className="absolute bottom-0 left-0 w-32 h-2 bg-brand-amber rounded-tr-full"></div>
-                <div className="absolute bottom-12 left-12 text-white/90 font-montserrat font-bold text-2xl tracking-tight">
-                  Trayectoria y Solidez<br />
-                  <span className="text-brand-amber text-sm font-medium uppercase tracking-[0.2em] opacity-80 italic">Operatividad Real</span>
+              <div className="aspect-[4/5] relative rounded-[28px] overflow-hidden shadow-premium group">
+                <Image
+                  src="/images/edificio-ref-03.jpg"
+                  alt="Trayectoria de Grupo Hernandez"
+                  fill
+                  className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-brand-navy/30 group-hover:bg-brand-navy/10 transition-colors duration-700 ease-out"></div>
+                <div className="absolute bottom-6 left-6 right-6 z-10">
+                  <div className="bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-premium border border-white/20">
+                    <span className="text-brand-amber text-xs font-bold uppercase tracking-[0.2em] mb-2 block">Imagen Referencial</span>
+                    <p className="text-brand-navy font-montserrat font-bold text-xl leading-tight">Presencia real en los edificios que administramos.</p>
+                  </div>
                 </div>
               </div>
             </div>

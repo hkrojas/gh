@@ -7,37 +7,37 @@ export const faqs = {
   comites: [
     {
       question: "¿Cómo manejan la transición desde nuestra administradora actual?",
-      answer: "Realizamos una revisión inicial del estado de las cuentas para asegurar un traspaso ordenado de la gestión.",
+      answer: "Realizamos una revisión detallada del estado de las cuentas y la documentación para asegurar un traspaso ordenado y profesional.",
     },
     {
-      question: "¿Cómo podemos ver los gastos del edificio?",
-      answer: "Mediante reportes mensuales claros que incluyen el sustento de cada pago realizado.",
+      question: "¿Cómo podemos supervisar los gastos del edificio?",
+      answer: "A través de reportes mensuales estructurados que incluyen el sustento documentario de cada operación realizada.",
     },
     {
-      question: "¿Quién elige a los proveedores?",
-      answer: "El Comité tiene la decisión final. Nosotros nos encargamos de buscarlos, supervisarlos y asegurar que cumplan su trabajo.",
+      question: "¿Cuál es el rol del Comité en la elección de proveedores?",
+      answer: "El Comité mantiene la potestad de decisión. Nosotros presentamos opciones calificadas, supervisamos la ejecución y aseguramos el cumplimiento de los estándares acordados.",
     },
     {
-      question: "¿Tienen procesos para la recuperación de cuotas atrasadas?",
-      answer: "Sí, aplicamos un seguimiento administrativo constante y respetuoso para reducir la morosidad.",
+      question: "¿Cuentan con procesos para la gestión de cuotas de mantenimiento?",
+      answer: "Sí, aplicamos un seguimiento administrativo constante para mantener la salud financiera del edificio, siempre bajo un trato institucional y respetuoso.",
     },
     {
-      question: "¿Qué sucede si hay una emergencia operativa?",
-      answer: "Contamos con canales de atención para incidentes que requieran acción inmediata en el edificio.",
+      question: "¿Cómo atienden los requerimientos operativos del edificio?",
+      answer: "Contamos con una red de proveedores y personal técnico para la atención de necesidades preventivas y correctivas de forma coordinada.",
     },
   ],
   residentes: [
     {
-      question: "¿Cómo reporto una avería en las áreas comunes?",
-      answer: "Puede hacerlo a través de nuestro canal de reporte de incidencias en esta web o vía WhatsApp de atención directa.",
+      question: "¿Cómo informo sobre una necesidad de mantenimiento en áreas comunes?",
+      answer: "Puede utilizar nuestro canal de atención disponible en esta web o comunicarse directamente vía WhatsApp para una gestión coordinada.",
     },
     {
-      question: "¿Dónde envío mi comprobante de pago de mantenimiento?",
-      answer: "Disponemos de una sección específica de 'Envío de constancia' donde puede adjuntar su comprobante de forma rápida.",
+      question: "¿Cómo registro mi pago de mantenimiento?",
+      answer: "Ponemos a su disposición la sección de 'Envío de constancia' en esta plataforma para adjuntar su comprobante de forma sencilla.",
     },
     {
-      question: "¿Cómo solicito una constancia de no adeudo?",
-      answer: "Debe gestionarlo a través de 'Consultas documentarias', indicando su torre y número de departamento.",
+      question: "¿Cómo solicito una constancia de no adeudo u otros documentos?",
+      answer: "Puede gestionarlo a través de nuestra sección de consultas documentarias, proporcionando los datos de su unidad inmobiliaria.",
     },
   ],
 };
