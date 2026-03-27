@@ -4,61 +4,62 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[750px] lg:h-[95vh] flex items-center overflow-hidden bg-brand-navy pt-[100px] pb-[80px]">
-      {/* Integrated Brand Image Background */}
+    <section className="relative h-[85vh] md:h-[95vh] flex items-center overflow-hidden bg-brand-navy">
+      {/* Heavy Integration Background */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-grupo-hernandez.jpg"
-          alt="Grupo Hernandez Hero"
+          alt="Administración Institucional Grupo Hernandez"
           fill
           priority
-          className="object-cover opacity-40"
+          className="object-cover opacity-60 scale-105 animate-[ken-burns_20s_ease_infinite_alternate]"
         />
-        {/* Navy Gradient Overlay for Text Legibility and Visual Strength */}
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#071423_0%,#0A1930_45%,rgba(16,40,74,0.3)_100%)]"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(197,160,33,0.08)_0%,transparent_40%)]"></div>
+        {/* Sophisticated Layered Gradients */}
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,#0A1930_0%,rgba(10,25,48,0.85)_40%,rgba(10,25,48,0.3)_100%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgba(197,160,33,0.12)_0%,transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-brand-navy/20"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl">
-          <div className="space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out">
-            <div className="inline-block px-4 py-2 bg-brand-amber/15 border border-brand-amber/30 rounded-full">
-              <span className="text-brand-amber font-bold text-xs uppercase tracking-[0.25em]">Gestión Inmobiliaria de Alto Nivel</span>
+        <div className="max-w-5xl">
+          <div className="space-y-10 animate-in fade-in slide-in-from-bottom-12 duration-1000 ease-out">
+            <div className="inline-flex items-center gap-3 px-3 py-1 bg-white/5 backdrop-blur-md border border-white/10 rounded-sm">
+              <span className="w-2 h-2 rounded-full bg-brand-amber animate-pulse"></span>
+              <span className="text-white/90 font-bold text-[10px] uppercase tracking-[0.3em]">Operatividad Institucional</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-montserrat font-bold text-white leading-[1.05] tracking-tight">
-              Solidez operativa <br />
-              <span className="text-brand-amber">institucional</span>
+            <h1 className="text-5xl md:text-7xl lg:text-9xl font-montserrat font-bold text-white leading-[0.95] tracking-tight">
+              Solidez <br />
+              <span className="text-brand-amber">Estructural</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-white/90 font-medium max-w-2xl leading-relaxed">
-              Transformamos la administración de edificios en una experiencia de orden, 
-              presupuestos claros y eficiencia operativa sostenible.
+            <p className="text-xl md:text-2xl text-white/95 font-medium max-w-2xl leading-relaxed opacity-90">
+              Administración técnica de edificios enfocada en la preservación del patrimonio y la transparencia operativa absoluta.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 pt-6">
+            <div className="flex flex-col sm:flex-row gap-6 pt-8">
               <Link 
                 href="/contacto" 
-                className="btn-premium group text-lg"
+                className="btn-premium group !py-5 !px-10 text-lg shadow-2xl"
               >
                 {siteContent.global.ctaMaster}
-                <svg className="w-5 h-5 transition-transform group-hover:translate-x-2 ease-out" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 transition-transform group-hover:translate-x-2 duration-300 ease-out" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
               <Link 
                 href="/nuestra-gestion" 
-                className="px-10 py-4 rounded-[14px] font-bold text-white bg-white/10 border border-white/20 hover:bg-white/15 transition-all duration-300 ease-out flex items-center justify-center text-lg shadow-premium"
+                className="px-10 py-5 rounded-[4px] font-bold text-white bg-white/5 backdrop-blur-sm border border-white/20 hover:bg-white/10 transition-all duration-300 ease-out flex items-center justify-center text-lg tracking-wide"
               >
-                Propuesta de Gestión
+                Ver Metodología
               </Link>
             </div>
           </div>
         </div>
       </div>
       
-      {/* Visual Anchor Bar */}
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-brand-navy to-transparent z-10"></div>
+      {/* Technical Bottom Anchor */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-brand-navy to-transparent z-10"></div>
     </section>
   );
 }

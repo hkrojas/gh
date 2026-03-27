@@ -5,9 +5,10 @@ export default function NosotrosPage() {
   return (
     <>
       <PageHeader 
-        title="Más de 8 años construyendo confianza."
-        description="Nuestra trayectoria se basa en el cumplimiento de promesas y la solidez técnica en la administración de propiedades."
+        title="Nuestra Trayectoria"
+        description="Más de 8 años profesionalizando la gestión de edificios en Lima mediante procesos técnicos y presencia real."
         breadcrumb={[{ label: "Nosotros", href: "/nosotros" }]}
+        bgImage="/images/edificio-ref-03.jpg"
       />
       
       <section className="py-24 bg-white overflow-hidden">

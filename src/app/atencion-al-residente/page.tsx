@@ -36,9 +36,10 @@ export default function AtencionResidentePage() {
   return (
     <>
       <PageHeader 
-        title={siteContent.residentes.title}
-        description={siteContent.residentes.subtitle}
+        title="Atención al Residente"
+        description="Canales oficiales para la gestión de requerimientos, consultas administrativas y soporte operativo en su edificio."
         breadcrumb={[{ label: "Atención al Residente", href: "/atencion-al-residente" }]}
+        bgImage="/images/edificio-ref-01.jpg"
       />
       
       <section className="py-24 bg-white overflow-hidden">
@@ -81,7 +82,7 @@ export default function AtencionResidentePage() {
               {faqs.residentes.map((faq, idx) => (
                 <div key={idx} className="bg-white p-8 md:p-12 rounded-[28px] border border-border-soft shadow-premium hover:shadow-trust transition-all duration-500 ease-out group">
                   <h4 className="text-xl md:text-2xl font-bold text-brand-navy mb-5 flex items-start gap-6 leading-tight tracking-tight">
-                    <span className="text-brand-amber font-black text-sm mt-1.5 opacity-40">0{idx + 1}</span>
+                    <span className="text-brand-amber font-black text-xs mt-1.5 opacity-50 tracking-tighter">{String(idx + 1).padStart(2, '0')}</span>
                     {faq.question}
                   </h4>
                   <div className="pl-12 md:pl-16">

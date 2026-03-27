@@ -8,9 +8,10 @@ export default function ParaComitesPage() {
   return (
     <main>
       <PageHeader 
-        title={siteContent.comites.title}
-        description={siteContent.comites.subtitle}
+        title="Gestión para Comités"
+        description="Información verificable y control operativo para juntas directivas que buscan proteger el patrimonio del edificio."
         breadcrumb={[{ label: "Para Comités", href: "/para-comites" }]}
+        bgImage="/images/edificio-ref-02.jpg"
       />
       
       <section className="py-24 bg-white overflow-hidden">

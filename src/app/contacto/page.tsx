@@ -7,9 +7,10 @@ export default function ContactoPage() {
   return (
     <>
       <PageHeader 
-        title="Solicite una Propuesta para su Edificio"
-        description="Contáctenos para coordinar una reunión técnica y conocer nuestro modelo de gestión."
+        title="Contacto Comercial"
+        description="Coordinemos una reunión técnica para presentarle nuestro modelo de gestión y una propuesta para su edificio."
         breadcrumb={[{ label: "Contacto", href: "/contacto" }]}
+        bgImage="/images/hero-grupo-hernandez.jpg"
       />
       
       <section className="py-24 bg-white overflow-hidden">

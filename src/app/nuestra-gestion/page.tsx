@@ -22,9 +22,10 @@ export default function GestionPage() {
   return (
     <>
       <PageHeader 
-        title="Metodología de Gestión"
-        description="Cómo aplicamos el orden y la claridad en la administración de su propiedad."
+        title="Nuestra Gestión"
+        description="Metodología técnica basada en la supervisión constante, transparencia auditable y preservación del patrimonio."
         breadcrumb={[{ label: "Nuestra Gestión", href: "/nuestra-gestion" }]}
+        bgImage="/images/edificio-ref-04.jpg"
       />
       
       <section className="py-24 bg-white overflow-hidden">
