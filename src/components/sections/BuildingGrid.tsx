@@ -66,15 +66,9 @@ export default function BuildingGrid() {
                 src={`https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1000&id=${building.id}`} 
                 alt={building.name}
                 fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                className="object-cover transition-transform duration-1200 group-hover:scale-[1.03]"
               />
-              <div className="absolute inset-0 bg-brand-navy/5 group-hover:bg-transparent transition-colors duration-500"></div>
-              
-              {building.type === "referencial" && (
-                <div className="absolute top-4 left-4 bg-brand-amber text-brand-navy text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">
-                  Gestión Activa
-                </div>
-              )}
+              <div className="absolute inset-0 bg-brand-navy/10 group-hover:bg-brand-navy/0 transition-colors duration-500"></div>
             </div>
             
             <div className="p-7">
@@ -84,8 +78,8 @@ export default function BuildingGrid() {
               <h3 className="font-montserrat font-bold text-brand-navy text-xl group-hover:text-brand-amber transition-colors leading-tight">
                 {building.name}
               </h3>
-              <p className="text-xs text-text-secondary mt-3 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                Administración integral y mantenimiento preventivo.
+              <p className="text-xs text-text-secondary mt-3 leading-relaxed opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+                Gestión operativa integral y mantenimiento preventivo.
               </p>
             </div>
           </div>
