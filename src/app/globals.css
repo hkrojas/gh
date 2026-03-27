@@ -79,14 +79,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-premium {
   @apply bg-brand-amber text-brand-navy font-bold py-3 px-8 rounded-[14px] 
-         transition-all duration-220 ease shadow-button hover:bg-brand-amber-hover 
+         transition-all duration-220 ease-in-out shadow-button hover:bg-brand-amber-hover 
          hover:-translate-y-[1px] flex items-center justify-center gap-2;
   min-height: 52px;
 }
 
 .card-institutional {
   @apply bg-white border border-border-soft rounded-[22px] p-7 
-         shadow-premium transition-all duration-220 ease 
+         shadow-premium transition-all duration-220 ease-in-out 
          hover:-translate-y-[3px] hover:shadow-trust hover:border-text-secondary/20;
 }
 
