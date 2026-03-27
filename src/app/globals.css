@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  /* Exact Institutional Palette */
+  /* Exact Institutional V8 Palette */
   --color-brand-navy: #0A1930;
   --color-brand-navy-light: #10284A;
   --color-brand-navy-deep: #071423;
+  
   --color-brand-amber: #C5A021;
   --color-brand-amber-hover: #AF8D18;
   --color-brand-amber-soft: #E6D08A;
@@ -27,9 +28,9 @@
   --font-montserrat: "Montserrat", sans-serif;
   --font-inter: "Inter", sans-serif;
 
-  /* Institutional Shadows & Radii */
-  --shadow-premium: 0 14px 34px rgba(10, 25, 48, 0.08); /* Exact spec for cards */
-  --shadow-trust: 0 16px 36px rgba(10, 25, 48, 0.08);   /* Exact spec for trust strip */
+  /* Institutional Shadows & Radii V8 */
+  --shadow-premium: 0 14px 34px rgba(10, 25, 48, 0.08);
+  --shadow-trust: 0 16px 36px rgba(10, 25, 48, 0.08);
   --shadow-button: 0 12px 24px rgba(197, 160, 33, 0.24);
 
   --radius-sm: 14px;
@@ -37,9 +38,9 @@
   --radius-lg: 22px;
   --radius-xl: 28px;
 
-  /* Motion System */
+  /* Motion System Tokens */
   --animate-reveal-scroll: reveal-scroll 0.32s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  
+}  
   @keyframes reveal-scroll {
     from {
       opacity: 0;
@@ -48,7 +49,6 @@
     to {
       opacity: 1;
       transform: translateY(0);
-    }
   }
 }
 
@@ -95,5 +95,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .reveal-on-scroll.active {
-  animation: reveal-scroll 0.32s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: var(--animate-reveal);
+}
+
+/* Base Transitions Override */
+* {
+  @apply transition-colors duration-220 ease-out;
+}
+
+.btn-premium {
+  @apply bg-brand-amber text-brand-navy font-bold py-3 px-8 rounded-[14px] 
+         transition-all duration-220 ease-out shadow-button hover:bg-brand-amber-hover 
+         hover:-translate-y-[1px] flex items-center justify-center gap-2;
+  min-height: 52px;
+}
+
+.card-institutional {
+  @apply bg-white border border-border-soft rounded-[22px] p-7 
+         shadow-trust transition-all duration-320 ease-out 
+         hover:-translate-y-[3px] hover:shadow-premium hover:border-brand-amber/20;
 }

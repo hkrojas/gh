@@ -27,10 +27,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 flex items-center ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 flex items-center bg-brand-navy ${
         isScrolled 
-          ? "bg-[#0A1930]/96 backdrop-blur-[10px] shadow-sm border-b border-white/8 h-[68px]" 
-          : "bg-[#0A1930]/88 backdrop-blur-[10px] h-[76px]"
+          ? "shadow-premium border-b border-white/10 h-[72px]" 
+          : "h-[84px]"
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
@@ -38,21 +38,21 @@ export default function Header() {
         <Link href="/" className="flex items-center group">
           <Image
             src="/logo-trans.png"
-            alt="Grupo Hernandez Logo"
-            width={180}
-            height={60}
-            className="h-9 w-auto md:h-11 transition-transform duration-300 group-hover:scale-[1.02]"
+            alt="Grupo Hernandez"
+            width={190}
+            height={64}
+            className="h-10 w-auto md:h-12 transition-transform duration-300 group-hover:scale-[1.01]"
             priority
           />
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center space-x-10">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="relative text-white/86 hover:text-white text-sm font-medium transition-colors py-2 group/nav"
+              className="relative text-white/90 hover:text-white text-[15px] font-medium transition-colors py-2 group/nav"
             >
               {link.name}
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-amber transition-all duration-300 group-hover/nav:w-full"></span>
@@ -60,7 +60,7 @@ export default function Header() {
           ))}
           <Link
             href="/contacto"
-            className="btn-premium !py-2.5 !px-6 !text-sm"
+            className="btn-premium !py-3 !px-7 !text-[15px]"
           >
             {siteContent.global.ctaMaster}
           </Link>
@@ -68,11 +68,11 @@ export default function Header() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden text-white"
+          className="lg:hidden text-white p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
-          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {isMenuOpen ? (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             ) : (
@@ -84,12 +84,12 @@ export default function Header() {
 
       {/* Mobile Nav Overlay */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-brand-navy border-t border-white/5 shadow-2xl py-8 px-6 flex flex-col space-y-5 animate-in fade-in slide-in-from-top-4">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-brand-navy-deep border-t border-white/10 shadow-premium py-10 px-6 flex flex-col space-y-6 animate-in fade-in slide-in-from-top-4 duration-320 ease-out">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-white/90 font-medium text-lg py-3 border-b border-white/5"
+              className="text-white/95 font-semibold text-xl py-4 border-b border-white/10"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.name}
@@ -97,7 +97,7 @@ export default function Header() {
           ))}
           <Link
             href="/contacto"
-            className="btn-premium w-full mt-4"
+            className="btn-premium w-full mt-6 py-4 text-lg"
             onClick={() => setIsMenuOpen(false)}
           >
             {siteContent.global.ctaMaster}

@@ -1,29 +1,29 @@
 export const siteContent = {
   home: {
     hero: {
-      title: "Tome el control de su edificio con una gestión basada en el orden y la claridad.",
-      subtitle: "Ayudamos a juntas directivas y propietarios a mantener su edificio en orden, con cuentas claras y una operación sin sorpresas.",
+      title: "Solidez operativa y transparencia integral en la gestión de su edificio.",
+      subtitle: "Ayudamos a juntas directivas y propietarios a mantener sus activos con orden administrativo, cuentas claras y una operación previsible.",
       cta: "Solicitar Evaluación de Gestión",
     },
     differentiation: {
-      title: "Administración dedicada exclusivamente al orden de su edificio.",
-      description: "Nos dedicamos solo a que su edificio funcione bien y su patrimonio esté siempre bien cuidado. Ponemos orden donde otros dejan dudas.",
+      title: "Administración dedicada al orden y la solvencia patrimonial.",
+      description: "Nos enfocamos en que su edificio funcione con eficiencia operativa y que su patrimonio esté protegido. Resolvemos dudas con gestión basada en evidencia.",
     },
     trust: {
-      text: "16 edificios confían su operatividad en nosotros hoy.",
+      text: "16 edificios confían su gestión operativa en nosotros.",
     },
   },
   comites: {
-    title: "Una gestión más clara para que el Comité tome mejores decisiones.",
-    subtitle: "Hacemos que lo complejo se vea claro: Información siempre disponible para que el comité tome mejores decisiones.",
+    title: "Gestión basada en datos para juntas directivas de alto desempeño.",
+    subtitle: "Facilitamos la toma de decisiones: Información estructurada y reportes claros siempre a disposición del comité.",
   },
   residentes: {
-    title: "Ayuda y Soporte al Residente",
-    subtitle: "Canales amigables y siempre claros para resolver sus dudas y reportar incidencias.",
+    title: "Atención y Soporte al Residente",
+    subtitle: "Canales de comunicación directos y procesos claros para la resolución de consultas y gestión de incidencias.",
   },
   global: {
     ctaMaster: "Solicitar Evaluación de Gestión",
     contactEmail: "contacto@grupohernandez.com.pe",
-    contactPhone: "+51 987 654 321", // Placeholder
+    contactPhone: "+51 1 743 4510", // Updated to a more standard Lima format
   },
 };
