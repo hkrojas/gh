@@ -19,7 +19,7 @@
   --color-border-tenue: #E6ECF5;
 
   --color-text-main: #16253D;
-  --color-text-secondary: #5F6F86;
+  --color-text-secondary: #4A5568;
   --color-text-on-navy: #F8FBFF;
   
   --color-state-success: #1E7A59;
@@ -73,8 +73,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-spacing {
-  padding-top: 88px;
-  padding-bottom: 88px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
 .btn-premium {

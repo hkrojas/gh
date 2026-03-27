@@ -41,7 +41,7 @@ export default function BuildingGrid() {
                 {building.name}
               </h3>
               <div className="w-8 h-1 bg-brand-amber/30 rounded-full group-hover:w-16 transition-all duration-500 ease-out"></div>
-              <p className="text-[13px] text-text-secondary mt-5 leading-relaxed font-medium opacity-65 group-hover:opacity-100 transition-opacity duration-500 ease-out">
+              <p className="text-[13px] text-text-secondary mt-5 leading-relaxed font-semibold">
                 Administración operativa integral y gestión de activos inmobiliarios.
               </p>
             </div>

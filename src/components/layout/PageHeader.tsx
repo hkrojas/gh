@@ -10,7 +10,7 @@ interface PageHeaderProps {
 
 export default function PageHeader({ title, description, breadcrumb, bgImage = "/images/hero-grupo-hernandez.jpg" }: PageHeaderProps) {
   return (
-    <section className="relative bg-brand-navy pt-40 pb-20 md:pt-48 md:pb-24 overflow-hidden">
+    <section className="relative bg-brand-navy pt-32 pb-16 md:pt-36 md:pb-20 overflow-hidden">
       {/* Background Image with Deep Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -18,9 +18,9 @@ export default function PageHeader({ title, description, breadcrumb, bgImage = "
           alt={title}
           fill
           priority
-          className="object-cover opacity-25"
+          className="object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,25,48,0.95)_0%,rgba(10,25,48,0.85)_100%)]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,25,48,0.96)_0%,rgba(10,25,48,0.9)_100%)]"></div>
       </div>
       
       {/* Decorative Accents */}
@@ -37,7 +37,7 @@ export default function PageHeader({ title, description, breadcrumb, bgImage = "
               {breadcrumb.map((item, idx) => (
                 <span key={idx} className="flex items-center gap-2">
                   <span className="opacity-30 text-white">/</span>
-                  <Link href={item.href} className="text-white/60 hover:text-white transition-colors">
+                  <Link href={item.href} className="text-white hover:text-white transition-all underline decoration-brand-amber underline-offset-4">
                     {item.label}
                   </Link>
                 </span>
@@ -45,11 +45,11 @@ export default function PageHeader({ title, description, breadcrumb, bgImage = "
             </nav>
           )}
 
-          <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-white mb-6 leading-tight tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-montserrat font-bold text-white mb-6 leading-tight tracking-tight">
             {title}
           </h1>
           {description && (
-            <p className="text-lg md:text-xl text-white/85 max-w-2xl leading-relaxed font-medium">
+            <p className="text-lg md:text-xl text-white max-w-2xl leading-relaxed font-semibold">
               {description}
             </p>
           )}

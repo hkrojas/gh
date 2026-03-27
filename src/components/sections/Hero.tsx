@@ -33,7 +33,7 @@ export default function Hero() {
               <span className="text-brand-amber">Estructural</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-white/95 font-medium max-w-2xl leading-relaxed opacity-90">
+            <p className="text-xl md:text-2xl text-white font-semibold max-w-2xl leading-relaxed">
               Administración técnica de edificios enfocada en la preservación del patrimonio y la transparencia operativa absoluta.
             </p>
 

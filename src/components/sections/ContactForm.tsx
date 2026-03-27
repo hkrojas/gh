@@ -108,7 +108,7 @@ export default function ContactForm() {
           </div>
 
           {/* Form Side */}
-          <div className="w-full lg:w-3/5 bg-white p-10 md:p-14">
+          <div className="w-full lg:w-3/5 bg-white p-8">
             {status === "success" ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-12 animate-in fade-in zoom-in-95 duration-500">
                 <div className="w-20 h-20 bg-green-50 text-green-600 rounded-full flex items-center justify-center mb-6">
@@ -132,7 +132,7 @@ export default function ContactForm() {
                     <label className="text-[10px] font-bold uppercase tracking-widest text-brand-navy/60 ml-1">Nombre Completo</label>
                     <input
                       {...register("name")}
-                      className={`w-full bg-bg-alt border ${errors.name ? 'border-red-400' : 'border-border-soft'} p-4 rounded-[14px] focus:bg-white focus:border-brand-amber focus:ring-4 focus:ring-brand-amber/5 outline-none transition-all placeholder:text-text-secondary/30`}
+                      className={`w-full bg-bg-alt border ${errors.name ? 'border-red-400' : 'border-border-soft'} p-4 rounded-[14px] focus:bg-white focus:border-brand-amber focus:ring-4 focus:ring-brand-amber/5 outline-none transition-all placeholder:text-text-secondary/60`}
                       placeholder="Ej. Juan Pérez"
                     />
                     {errors.name && <p className="text-[10px] font-bold text-red-500 uppercase mt-1.5 ml-1">{errors.name.message}</p>}
@@ -141,7 +141,7 @@ export default function ContactForm() {
                     <label className="text-[10px] font-bold uppercase tracking-widest text-brand-navy/60 ml-1">Correo Corporativo</label>
                     <input
                       {...register("email")}
-                      className={`w-full bg-bg-alt border ${errors.email ? 'border-red-400' : 'border-border-soft'} p-4 rounded-[14px] focus:bg-white focus:border-brand-amber focus:ring-4 focus:ring-brand-amber/5 outline-none transition-all placeholder:text-text-secondary/30`}
+                      className={`w-full bg-bg-alt border ${errors.email ? 'border-red-400' : 'border-border-soft'} p-4 rounded-[14px] focus:bg-white focus:border-brand-amber focus:ring-4 focus:ring-brand-amber/5 outline-none transition-all placeholder:text-text-secondary/60`}
                       placeholder="juan.perez@empresa.com"
                     />
                     {errors.email && <p className="text-[10px] font-bold text-red-500 uppercase mt-1.5 ml-1">{errors.email.message}</p>}
@@ -153,7 +153,7 @@ export default function ContactForm() {
                     <label className="text-[10px] font-bold uppercase tracking-widest text-brand-navy/60 ml-1">Edificio / Condominio</label>
                     <input
                       {...register("building")}
-                      className={`w-full bg-bg-alt border border-border-soft p-4 rounded-[14px] focus:bg-white focus:border-brand-amber focus:ring-4 focus:ring-brand-amber/5 outline-none transition-all placeholder:text-text-secondary/30`}
+                      className={`w-full bg-bg-alt border border-border-soft p-4 rounded-[14px] focus:bg-white focus:border-brand-amber focus:ring-4 focus:ring-brand-amber/5 outline-none transition-all placeholder:text-text-secondary/60`}
                       placeholder="Nombre del inmueble"
                     />
                   </div>
@@ -161,7 +161,7 @@ export default function ContactForm() {
                     <label className="text-[10px] font-bold uppercase tracking-widest text-brand-navy/60 ml-1">Distrito / Zona</label>
                     <input
                       {...register("district")}
-                      className={`w-full bg-bg-alt border border-border-soft p-4 rounded-[14px] focus:bg-white focus:border-brand-amber focus:ring-4 focus:ring-brand-amber/5 outline-none transition-all placeholder:text-text-secondary/30`}
+                      className={`w-full bg-bg-alt border border-border-soft p-4 rounded-[14px] focus:bg-white focus:border-brand-amber focus:ring-4 focus:ring-brand-amber/5 outline-none transition-all placeholder:text-text-secondary/60`}
                       placeholder="Ej. San Isidro"
                     />
                   </div>
@@ -172,7 +172,7 @@ export default function ContactForm() {
                   <textarea
                     {...register("message")}
                     rows={4}
-                    className={`w-full bg-bg-alt border ${errors.message ? 'border-red-400' : 'border-border-soft'} p-4 rounded-[14px] focus:bg-white focus:border-brand-amber focus:ring-4 focus:ring-brand-amber/5 outline-none transition-all placeholder:text-text-secondary/30 resize-none`}
+                    className={`w-full bg-bg-alt border ${errors.message ? 'border-red-400' : 'border-border-soft'} p-4 rounded-[14px] focus:bg-white focus:border-brand-amber focus:ring-4 focus:ring-brand-amber/5 outline-none transition-all placeholder:text-text-secondary/60 resize-none`}
                     placeholder="Describa brevemente los requerimientos de su junta de propietarios..."
                   />
                   {errors.message && <p className="text-[10px] font-bold text-red-500 uppercase mt-1.5 ml-1">{errors.message.message}</p>}
