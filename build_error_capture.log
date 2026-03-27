@@ -1,0 +1,79 @@
+▲ Next.js 16.2.1 (Turbopack)
+
+  Creating an optimized production build ...
+Error: Cannot apply unknown utility class `ease`
+    [2m[at onInvalidCandidate (C:\Users\HP\Desktop\Grupo Hernandez\node_modules\tailwindcss\dist\lib.js:21:1511)][0m
+    [2m[at Ee (C:\Users\HP\Desktop\Grupo Hernandez\node_modules\tailwindcss\dist\lib.js:16:37066)][0m
+    [2m[at C:\Users\HP\Desktop\Grupo Hernandez\node_modules\tailwindcss\dist\lib.js:21:355][0m
+    [2m[at _r (C:\Users\HP\Desktop\Grupo Hernandez\node_modules\tailwindcss\dist\lib.js:3:1733)][0m
+    [2m[at I (C:\Users\HP\Desktop\Grupo Hernandez\node_modules\tailwindcss\dist\lib.js:3:1377)][0m
+    [2m[at Te (C:\Users\HP\Desktop\Grupo Hernandez\node_modules\tailwindcss\dist\lib.js:21:172)][0m
+    [2m[at mn (C:\Users\HP\Desktop\Grupo Hernandez\node_modules\tailwindcss\dist\lib.js:38:294)][0m
+    [2m[at async gn (C:\Users\HP\Desktop\Grupo Hernandez\node_modules\tailwindcss\dist\lib.js:38:631)][0m
+    [2m[at async Xr (C:\Users\HP\Desktop\Grupo Hernandez\node_modules\@tailwindcss\node\dist\index.js:10:3416)][0m
+    [2m[at async N (C:\Users\HP\Desktop\Grupo Hernandez\node_modules\@tailwindcss\postcss\dist\index.js:10:3979)][0m
+
+> Build error occurred
+Error: Turbopack build failed with 3 errors:
+./src/app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\HP\Desktop\Grupo Hernandez\src\app\globals.css:1:1: Cannot apply unknown utility class `ease`
+    at Input.error (node_modules/postcss/lib/input.js:135:16) [C:\Users\HP\Desktop\Grupo Hernandez\.next\build\chunks\node_modules_13sb.px._.js:4651:22]
+    at error (node_modules/postcss/lib/node.js:146:32) [C:\Users\HP\Desktop\Grupo Hernandez\.next\build\chunks\node_modules_13sb.px._.js:928:38]
+    [at Object.Once (C:\Users\HP\Desktop\Grupo Hernandez\node_modules\@tailwindcss\postcss\dist\index.js:10:6913)]
+    at async LazyResult.runAsync (node_modules/postcss/lib/lazy-result.js:293:11) [C:\Users\HP\Desktop\Grupo Hernandez\.next\build\chunks\node_modules_13sb.px._.js:6214:21]
+    at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34) [C:\Users\HP\Desktop\Grupo Hernandez\.next\build\chunks\[root-of-the-server]__0d-m0h0._.js:146:36]
+    at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23) [C:\Users\HP\Desktop\Grupo Hernandez\.next\build\chunks\[root-of-the-server]__0ubbtyl._.js:443:31]
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+./src/components/sections/ContactForm.tsx:5:1
+Module not found: Can't resolve '@hookform/resolvers/zod'
+  [90m3 |[0m [36mimport[0m { useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { useForm } [36mfrom[0m [32m"react-hook-form"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { zodResolver } [36mfrom[0m [32m"@hookform/resolvers/zod"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m * [36mas[0m z [36mfrom[0m [32m"zod"[0m;
+  [90m7 |[0m [36mimport[0m { siteContent } [36mfrom[0m [32m"@/lib/data/content"[0m;
+  [90m8 |[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/sections/ContactForm.tsx
+    ./src/app/contacto/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/sections/ContactForm.tsx:4:1
+Module not found: Can't resolve 'react-hook-form'
+  [90m2 |[0m
+  [90m3 |[0m [36mimport[0m { useState } [36mfrom[0m [32m"react"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { useForm } [36mfrom[0m [32m"react-hook-form"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { zodResolver } [36mfrom[0m [32m"@hookform/resolvers/zod"[0m;
+  [90m6 |[0m [36mimport[0m * [36mas[0m z [36mfrom[0m [32m"zod"[0m;
+  [90m7 |[0m [36mimport[0m { siteContent } [36mfrom[0m [32m"@/lib/data/content"[0m;
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/sections/ContactForm.tsx
+    ./src/app/contacto/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34) [C:\Users\HP\Desktop\Grupo Hernandez\.next\build\chunks\[root-of-the-server]__0d-m0h0._.js:146:36])
+    at async run (turbopack:///[turbopack-node]/child_process/evaluate.ts:89:23) [C:\Users\HP\Desktop\Grupo Hernandez\.next\build\chunks\[root-of-the-server]__0ubbtyl._.js:443:31])
+    at <unknown> (./src/components/sections/ContactForm.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/sections/ContactForm.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
